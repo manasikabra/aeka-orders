@@ -1,0 +1,21 @@
+# dependencies
+node_modules/
+
+# build output
+dist/
+
+# environment variables (keep secrets out of git)
+.env
+.env.local
+.env.*.local
+
+# editor / OS files
+.DS_Store
+*.swp
+*.swo
+.vscode/
+.idea/
+
+# logs
+*.log
+npm-debug.log*
