@@ -36,6 +36,7 @@ import {
     Settings
 } from 'lucide-react';
 import { db, auth, appId } from './firebase';
+import { DEFAULT_QR_BASE64 } from './defaultQr';
 
 const MENU = [
     // Hot Drinks
@@ -81,7 +82,7 @@ export default function App() {
     const [mobileNumber, setMobileNumber] = useState('');
     const [txnId, setTxnId] = useState('');
     const [orders, setOrders] = useState([]);
-    const [customQrUrl, setCustomQrUrl] = useState('');
+    const [customQrUrl, setCustomQrUrl] = useState(DEFAULT_QR_BASE64);
     const [filterDate, setFilterDate] = useState(() => new Date().toLocaleDateString('en-CA'));
     const [isSubmitting, setIsSubmitting] = useState(false);
     const [isAdminAuthed, setIsAdminAuthed] = useState(() => localStorage.getItem('baristaAuthed') === 'true');
